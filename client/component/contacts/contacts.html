@@ -11,10 +11,14 @@
         </div>
         <div class="col-md-6 text-right">
           <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newContactModal">
+            <i class="fa fa-plus"></i>
             Add New Contact
           </button>
           {{#if showDelete}}
-          <button type="button" class="btn btn-sm btn-danger delete">Delete</button>
+          <button type="button" class="btn btn-sm btn-danger delete">
+            <i class="fa fa-trash-o"></i>
+            Delete
+          </button>
           {{/if}}
         </div>
       </div>
@@ -22,7 +26,7 @@
     <div class="table-responsive">
       <table class="table table-striped">
         <thead>
-        <tr>
+        <tr style="cursor: pointer;">
           <th data-sort-key="name">Name {{#if displaySortCaret "name"}}<i class="fa fa-caret-{{sortCaretDir}}"></i>{{/if}}</th>
           <th data-sort-key="number">Number {{#if displaySortCaret "number"}}<i class="fa fa-caret-{{sortCaretDir}}"></i>{{/if}}</th>
           <th data-sort-key="email">Email {{#if displaySortCaret "email"}}<i class="fa fa-caret-{{sortCaretDir}}"></i>{{/if}}</th>

@@ -7,8 +7,6 @@ Template.contact_form.events({
   },
 
   "submit .contactForm": function(event){
-    console.log('form submitted!');
-    console.log(event.target.name.value);
 
     if(Session.get('edit')){
 
