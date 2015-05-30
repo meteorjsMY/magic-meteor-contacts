@@ -1,0 +1,34 @@
+<template name="contact_form">
+  <div class="modal fade" id="newContactModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">{{mode}} Contact</h4>
+        </div>
+        <form class="contactForm">
+          <div class="modal-body">
+            <div class="form-group">
+              <input class="form-control" name="name" type="text" placeholder="Name" value="{{contact.name}}" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="number" type="number" placeholder="Number" value="{{contact.number}}" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="email" type="email" placeholder="Email" value="{{contact.email}}" required>
+            </div>
+            <div class="form-group">
+              <input class="form-control" name="address" type="text" placeholder="Address" value="{{contact.address}}" required>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save Contact</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</template>

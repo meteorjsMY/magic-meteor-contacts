@@ -1,0 +1,25 @@
+<head>
+  <title>Contacts</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+  {{> navbar}}
+  {{#if currentUser}}
+    <div class="container">
+      <h1>Contacts</h1>
+      {{> contacts}}
+      {{> contact_form}}
+    </div>
+  {{else}}
+
+    {{> logged_out}}
+
+  {{/if}}
+</body>
+
+<template name="logged_out">
+  <div class="jumbotron text-center">
+    <h1>Welcome to our Contact Book</h1>
+  </div>
+</template>

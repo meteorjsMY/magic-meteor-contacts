@@ -1,0 +1,41 @@
+<template name="contacts">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="row text-right">
+        <div class="col-md-6">
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control searchbox input-sm" name="query" placeholder="Search">
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6 text-right">
+          <button type="button" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newContactModal">
+            Add New Contact
+          </button>
+          {{#if showDelete}}
+          <button type="button" class="btn btn-sm btn-danger delete">Delete</button>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th data-sort-key="name">Name {{#if displaySortCaret "name"}}<i class="fa fa-caret-{{sortCaretDir}}"></i>{{/if}}</th>
+          <th data-sort-key="number">Number {{#if displaySortCaret "number"}}<i class="fa fa-caret-{{sortCaretDir}}"></i>{{/if}}</th>
+          <th data-sort-key="email">Email {{#if displaySortCaret "email"}}<i class="fa fa-caret-{{sortCaretDir}}"></i>{{/if}}</th>
+          <th data-sort-key="address">Address {{#if displaySortCaret "address"}}<i class="fa fa-caret-{{sortCaretDir}}"></i>{{/if}}</th>
+          <th style="width: 100px;" class="text-nowrap"></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each contacts}}
+        {{> contact}}
+        {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</template>
