@@ -13,3 +13,5 @@ ian:accounts-ui-bootstrap-3
 accounts-password
 accounts-facebook
 pfafman:font-awesome-4
+accounts-google
+accounts-github
